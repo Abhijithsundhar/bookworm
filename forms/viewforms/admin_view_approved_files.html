@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="../logout"> logout</a>
+<table>
+  <tr>
+    <th>Note Id</th>
+    <th>Degree</th>
+    <th>Semester</th>
+    <th>Subject</th>
+    <th>File Path</th>
+      <th>added by</th>
+     <th>Status</th>
+    <th>Uploaded Date</th>
+      <th>delete</th>
+    <th>view file</th>
+
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td>{{i['idnote']}}</td>
+
+    <td>{{i['iddegree']}}</td>
+
+    <td>{{i['semester']}}</td>
+
+    <td>{{i['idsubject']}}</td>
+
+    <td>{{i['file_path']}}</td>
+      <td>{{i['user_id']}}</td>
+      <td>{{i['status']}}</td>
+
+    <td>{{i['upload_date']}}</td>
+
+ <td>
+      <form method="post" action="delete_file?id{{i['idnote']}}">
+        <input type="hidden" value="{{i['idnote']}}" name="idnote">
+        <input type="submit" value="remove">
+      </form>
+    </td>
+    <td><a style="color:brown" href="/user_download_file?id={{i['file_path']}}">Download File </a></td>
+
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

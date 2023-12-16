@@ -1,0 +1,123 @@
+<html>
+<head>
+<style>
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(130, 106, 251);
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  box-sizing: border-box;
+}
+textarea[name=txtaddress], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 7px 10px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+}
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  box-sizing: border-box;
+}
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  box-sizing: border-box;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+	<table>
+		<tr>
+			
+			<td><h2 style="color:white;">Update Student  Register</h2></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>Enter Register Number :</td>
+			<td><input type="text" name="txtRegNo" /></td>
+		</tr>
+		
+		<tr>
+			<td>Enter Your Name :</td>
+			<td><input type="text" name="txtName" /></td>
+		</tr>
+
+		<tr>
+			<td>Enter Your Address :</td>
+			<td><textarea name="txtaddress"></textarea></td>
+		</tr>
+
+		<tr>
+			<td>Enter Your Number :</td>
+			<td><input type="text" name="txtPhone" /></td>
+		</tr>
+
+		<tr>
+			<td>Enter Your Email :</td>
+			<td><input type="email" name="txtEmail" /></td>
+		</tr>
+		
+		<tr>
+			<td>Enter Password :</td>
+			<td><input type="password" name="txtpwd" /></td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><input type="submit"/></td>
+		</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>																									<html>
+<head>
+<style>
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(130, 106, 251);
+}
+textarea[name=discription], select {
+  width: 150%;
+  padding: 9px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 7px 10px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><h2  style="color:white;">Update Query</h2></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>Discription : </td>
+			<td><textarea name="discription"></textarea></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td><input type="submit"/></td>
+		</tr>
+</table>
+</body>
+</html>

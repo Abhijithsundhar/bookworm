@@ -1,0 +1,26 @@
+
+<a href="../logout"> logout</a>
+<h2>Home</h2>
+<form action="/admin_update_subject" method="post">
+<table style="width:80%">
+  <tr>
+    <th colspan="2">Edit Subject</th>
+  </tr>
+    <input type="hidden" name="idsubject" value="{{ data['idsubject']}}"
+
+  <tr>
+    <th>name</th>
+    <td><input type="text" value="{{ data['name'] }}" name="name" required></td>
+  </tr>
+  <tr>
+    <th>semester</th>
+    <td><input type="text" name="semester" value="{{ data['semester'] }}" required></td>
+  </tr>
+  <tr>
+    <td colspan="2"><input type="submit" ></td>
+  </tr>
+
+</table>
+</form>
+
+

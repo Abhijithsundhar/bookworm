@@ -1,0 +1,39 @@
+
+<a href="../logout"> logout</a>
+<a href="admin_home">go back</a>
+
+<h2>register subject</h2>
+<form action="../register_sub" method="post">
+<table>
+ 
+  <tr>
+    <th>Subject Name</th>
+    <td><input type="text" name="name" required></td>
+  </tr>
+  <tr>
+    <th>Semester</th>
+            <td>
+              <select  name="semester"  required >
+                <option value="" >------------</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+            </td>
+  </tr>
+
+    <td><input type="text" name="iddegree" value="{{ cdata }}" required hidden></td>
+
+  <tr>
+    <td><input type="submit" value="submit"></td>
+  </tr>
+
+</table>
+</form>
+
+

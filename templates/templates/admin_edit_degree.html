@@ -1,0 +1,24 @@
+
+<a href="../logout"> logout</a>
+<h2>Home</h2>
+<form action="/admin_update_degree" method="post">
+<table style="width:80%">
+  <tr>
+    <th colspan="2">Edit Degree</th>
+  </tr>
+  <tr>
+      <input type="hidden" name="id" id="dd"value="{{ data['iddegree'] }}" required >
+    <td>Degree name</td>
+    <td><input type="text" name="txtname" value="{{ data['name'] }}" required style="width:80%"></td>
+  </tr>
+  <tr>
+    <td>description</td>
+    <td><input type="text" name="txtdes" value="{{ data['description'] }}" required style="width:80%"></td>
+  </tr>
+ <tr>
+    <td colspan="2"><input type="submit"  /></td>
+  </tr>
+
+</table>
+
+

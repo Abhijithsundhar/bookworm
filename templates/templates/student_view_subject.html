@@ -1,0 +1,24 @@
+<a href="student_view_degree">go back</a>
+<a href="../logout"> logout</a>
+<h2>View subjects</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Subject Id</th>
+    <th>Name</th>
+    <th>Semester</th>
+
+  </tr>
+{% for data in cdata %}
+  <tr>
+    <td>  {{data['idsubject']}} </td>
+    <td>  {{data['name']}}  </td>
+    <td>  {{data['semester']}}  </td>
+    <td>
+
+      <a href="student_upload_file?id={{data['idsubject']}}">upload</a>
+    </td>
+
+  </tr>
+  {% endfor %}
+</table>

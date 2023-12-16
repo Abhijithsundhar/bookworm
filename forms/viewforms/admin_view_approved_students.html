@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>approved students</title>
+</head>
+<body>
+<a href="../logout"> logout</a>
+<table>
+  <tr>
+    <th>DEGREE ID</th>
+    <th>STUDENT ID</th>
+    <th>STUDENT NAME</th>
+    <th>EMAIL</th>
+    <th>ADDRESS</th>
+    <th>CONTACT</th>
+     <th>PASSWORD</th>
+      <th>STATUS</th>
+    <th>DELETE</th>
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td>{{i['iddegree']}}</td>
+
+    <td>{{i['user_id']}}</td>
+
+    <td>{{i['name']}}</td>
+
+    <td>{{i['email']}}</td>
+
+    <td>{{i['address']}}</td>
+
+    <td>{{i['phone']}}</td>
+      <td>{{i['password']}}</td>
+
+    <td>{{i['status']}}</td>
+
+
+ <td>
+
+     <a href="delete_student?id={{i['user_id']}}">remove</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

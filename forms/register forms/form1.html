@@ -1,0 +1,124 @@
+<html>
+<head>
+	<!--<link rel="stylesheet" href="bookworm-project/css/style.css" /> -->
+	<style>
+		/* Import Google font - Poppins */
+		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+		* {
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		  font-family: "Poppins", sans-serif;
+		}
+		body {
+		  min-height: 100vh;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  padding: 20px;
+		  background: rgb(130, 106, 251);
+		}
+		input[type=text], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 9px;
+		  box-sizing: border-box;
+		}
+		textarea[name=txtaddress], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 9px;
+		  box-sizing: border-box;
+		}
+		
+		input[type=submit] {
+		  width: 50%;
+		  background-color: #4CAF50;
+		  color: white;
+		  padding: 7px 10px;
+		  margin: 4px 0;
+		  border: none;
+		  border-radius: 9px;
+		  cursor: pointer;
+		}
+		input[type=password], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 9px;
+		  box-sizing: border-box;
+		}
+		input[type=email], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 9px;
+		  box-sizing: border-box;
+		}
+		
+		input[type=submit]:hover {
+		  background-color: #45a049;
+		}
+		
+		div {
+		  border-radius: 5px;
+		  background-color: #f2f2f2;
+		  padding: 20px;
+		}
+</style>
+</head>
+<body>
+	<div>
+<form>
+	<a href="../logout"> logout</a>
+<a href="admin_home">go back</a>
+
+	<table>
+		<tr>
+			<th>Student Register</th>
+			<form action="/reg_student" method="post">
+		</tr>
+
+		<tr>
+			<th>Register Number:</th>
+			<td><input type="text" name="txtRegNo" /></td>
+		</tr>
+
+		<tr>
+			<th>Enter Name:</th>
+			<td><input type="text" name="txtname" required/></td>
+		</tr>
+
+		<tr>
+			<th>Enter Address:</th>
+			<td><textarea name="address" required></textarea></td>
+		</tr>
+
+		<tr>
+			<th>Enter Email:</th>
+			<td><input type="email" name="txtemail" required /></td>
+		</tr>
+            <tr>
+			<th>password:</th>
+			<td><input type="password" name="password" required /></td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td colspan="2"><input type="submit"/></td>
+		</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

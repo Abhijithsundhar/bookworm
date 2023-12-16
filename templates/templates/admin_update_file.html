@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="../logout"> logout</a>
+<table>
+    <form action="updating_status_file" method="post">
+        <tr>
+            <td>status</td>
+            <td>
+              <select id="status" name="status"  required >
+                <option value="{{ data['status']}}" selected>{{ data['status']}}(default)</option>
+                <option value="pending">pending</option>
+                <option value="approved">approved</option>
+              </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="update"></td>
+        </tr>
+
+</table>
+</body>
+</html>

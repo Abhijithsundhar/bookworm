@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regiseration details</title>
+</head>
+<body>
+<a href="../logout"> logout</a>
+
+<h1>registration details</h1>
+<table>
+    <tr>
+        <th>STATUS</th>
+        <td>{{data['status']}}</td>
+    </tr>
+    <tr>
+        <th>STUDENT ID</th>
+        <td>{{data['user_id']}}</td>
+    </tr>
+    <tr>
+        <th>STUDENT NAME</th>
+        <td>{{data['name']}}</td>
+    </tr>
+    <tr>
+        <th>EMAIL</th>
+        <td>{{data['email']}}</td>
+    </tr>
+    <tr>
+        <th>ADDRESS</th>
+        <td>{{data['address']}},pincode:{{data['pincode']}}</td>
+    </tr>
+    <tr>
+        <th>CONTACT</th>
+        <td>{{data['phone']}}</td>
+    </tr>
+    <tr>
+        <th>PASSWORD</th>
+        <td>{{data['password']}}</td>
+    </tr>
+</table>
+
+</body>
+</html>

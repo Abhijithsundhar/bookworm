@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="staff_home">go back</a>
+<a href="../logout"> logout</a>
+<table>
+  <tr>
+    <th>sl no</th>
+    <th>Note Id</th>
+    <th>Degree</th>
+    <th>Semester</th>
+    <th>Subject</th>
+    <th>File Path</th>
+    <th>Uploaded By</th>
+    <th>Uploaded Date</th>
+    <th>view file</th>
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td>{{loop.index }}</td>
+    <td>{{i['idnote']}}</td>
+
+    <td>{{i['iddegree']}}</td>
+
+    <td>{{i['semester']}}</td>
+
+    <td>{{i['idsubject']}}</td>
+
+    <td>{{i['file_path']}}</td>
+
+    <td>{{i['user_id']}}</td>
+
+    <td>{{i['upload_date']}}</td>
+
+    <td><a style="color:brown" href="/user_download_file?id={{i['file_path']}}">Download File </a></td>
+
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

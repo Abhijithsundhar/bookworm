@@ -1,0 +1,51 @@
+<style>
+#staff {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#staff td, #staff th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#staff tr:nth-child(even){background-color: #f2f2f2;}
+
+#staff tr:hover {background-color: #ddd;}
+
+#staff th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4062FF;
+  color: white;
+}
+</style>
+</head>
+<a href="admin_home">go back</a>
+<a href="../logout"> logout</a>
+<table id="staff">
+
+  <th colspan="8"><span style="align:center;">View Staff</span></th><br>
+   <tr>
+    <th>Staff Id</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Password</th>
+  </tr>
+    {% for data in staff %}
+  <tr>
+    <td> {{data['user_id']}} </td>
+    <td>{{data['name']}}  </td>
+    <td>{{data['address']}}</td>
+    <td> {{data['email']}} </td>
+    <td>{{data['phone']}}  </td>
+    <td> {{data['password']}} </td>
+    <td> <a href="/delete_staff?id={{ data['user_id'] }}">Remove</a></td>
+    <td> <a href="/edit_staff_link?id={{ data['user_id'] }}">Edit</a></td>
+  </tr>
+{% endfor %}
+</table>

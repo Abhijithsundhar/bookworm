@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<a href="../logout"> logout</a>
+<a href="student_home">go back</a>
+<h1>Viewing Pending Files</h1>
+<table>
+  <tr>
+    <th>Note Id</th>
+    <th>Degree</th>
+    <th>Semester</th>
+    <th>Subject</th>
+    <th>File Path</th>
+    <th>Uploaded Date</th>
+    <th>Status</th>
+    <th>view file</th>
+    <th>remove file</th>
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td>{{i['idnote']}}</td>
+
+    <td>{{i['iddegree']}}</td>
+
+    <td>{{i['semester']}}</td>
+
+    <td>{{i['idsubject']}}</td>
+
+    <td>{{i['file_path']}}</td>
+
+    <td>{{i['upload_date']}}</td>
+
+    <td>{{i['status']}}</td>
+    <td>view file</td>
+    <td>
+      <a href="delete_file?id={{i['idnote']}}">remove</a>
+    </td>
+    <td><a style="color:brown" href="/user_download_file?id={{i['file_path']}}">Download File </a></td>
+
+  </tr>
+  {% endfor %}
+</table>
+
+<h1>Viewing Approved Files</h1>
+<table>
+  <tr>
+    <th>Note Id</th>
+    <th>Degree</th>
+    <th>Semester</th>
+    <th>Subject</th>
+    <th>File Path</th>
+    <th>Uploaded Date</th>
+    <th>Status</th>
+    <th>view file</th>
+
+  </tr>
+  {% for i in adata %}
+  <tr>
+    <td>{{i['idnote']}}</td>
+
+    <td>{{i['iddegree']}}</td>
+
+    <td>{{i['semester']}}</td>
+
+    <td>{{i['idsubject']}}</td>
+
+    <td>{{i['file_path']}}</td>
+
+    <td>{{i['upload_date']}}</td>
+
+    <td>{{i['status']}}</td>
+
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
