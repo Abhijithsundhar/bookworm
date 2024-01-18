@@ -7,7 +7,6 @@ from werkzeug.utils import secure_filename
 from DBConnection import Db
 from datetime import datetime
 
-
 app = Flask(__name__, template_folder='templates', static_url_path='/static/')
 UPLOAD_FOLDER = './static'
 ALLOWED_EXTENSIONS = {'pdf'}
@@ -63,8 +62,6 @@ def login():
             else:
                 session['userid'] = userid
                 return student_home()
-
-
         else:
             session['userid'] = userid
             return staff_home()
@@ -97,10 +94,6 @@ def signup():
             return "<script>alert('please enter a unique userid');window.location='/sign';</script>"
     else:
         return "<script>alert('please enter a unique userid');window.location='/sign';</script>"
-
-
-
-
 
 @app.route('/register_degree_link')
 def register_degree_link():
@@ -156,7 +149,6 @@ def register_subject():
     session['iddegree'] = id
     return render_template('register_subject.html', cdata=id)
 
-
 @app.route('/register_sub', methods=['post'])
 def register_sub():
     iddegree= session['iddegree']
@@ -183,8 +175,6 @@ def user_view_subject():
     q = "select * from subject where iddegree='" + iddegree + "' "
     data = ob.select(q)
     return render_template('user_view_subject.html', cdata=data)
-
-
 
 @app.route('/view_all_subject')#optional
 def view_all_subject():
